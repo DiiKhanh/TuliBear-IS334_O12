@@ -40,10 +40,6 @@ export default function Login() {
       setModal(false);
       toast.success("Đăng nhập thành công!");
     }
-    if (!user) {
-      setModal(false);
-      toast.error("Có lỗi khi đăng nhập");
-    }
   };
 
   return (
