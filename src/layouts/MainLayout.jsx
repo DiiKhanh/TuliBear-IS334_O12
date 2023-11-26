@@ -4,7 +4,9 @@ import Box from "@mui/material/Box";
 import React from "react";
 import Footer from "./footer/Footer";
 import Header from "./header/Header";
+import Login from "./header/Login";
 
+import { Toaster } from "sonner";
 // ----------------------------------------------------------------------
 
 
@@ -14,6 +16,16 @@ export default function DashboardLayout() {
 
   return (
     <React.Fragment>
+      <Toaster position="top-right"
+        toastOptions={{
+          style: {
+            background: "green",
+            color:"white"
+          },
+          className: "success"
+        }}
+      />
+      <Login />
       {/* Header */}
       <Box display="flex" flexDirection="column" sx={{
         minHeight: "calc(100vh - 300px)",

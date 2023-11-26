@@ -19,12 +19,16 @@ import {
   styled
 } from "@mui/material";
 import { useState } from "react";
+import { useAppStore } from "~/store/useAppStore";
+import useAuthUser from "~/hooks/useAuthUser";
+import UserMenu from "./UserMenu";
 
 export const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState({
     left: false
   });
-
+  const { setModal } = useAppStore();
+  const user = useAuthUser();
   const toggleDrawer = (anchor, open) => (event) => {
     if (
       event.type === "keydown" &&
@@ -44,7 +48,7 @@ export const Navbar = () => {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {["Home", "Features", "Services", "Listed", "Contact"].map(
+        {["Home", "Products", "Services", "Blog", "Contact"].map(
           (text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
@@ -98,10 +102,10 @@ export const Navbar = () => {
     alignItems: "center",
     justifyContent: "space-between",
     padding: theme.spacing(2),
+    maxWidth:"1500px!important",
     [theme.breakpoints.down("md")]: {
       padding: theme.spacing(2)
-    },
-    width:"1800px!important"
+    }
   }));
 
   const NavbarLogo = styled("img")(({ theme }) => ({
@@ -138,9 +142,9 @@ export const Navbar = () => {
 
         <NavbarLinksBox>
           <NavLink variant="body2">Home</NavLink>
-          <NavLink variant="body2">Features</NavLink>
+          <NavLink variant="body2">Products</NavLink>
           <NavLink variant="body2">Services</NavLink>
-          <NavLink variant="body2">Listed</NavLink>
+          <NavLink variant="body2">Blog</NavLink>
           <NavLink variant="body2">Contact</NavLink>
         </NavbarLinksBox>
       </Box>
@@ -149,16 +153,18 @@ export const Navbar = () => {
         sx={{
           display: "flex",
           alignItems: "center",
-          justifyContent: "center",
-          gap: "1rem"
+          justifyContent: "center"
+          // gap: "1rem"
         }}
       >
-        <NavLink variant="body2">Sign Up</NavLink>
-        <CustomButton
-          backgroundColor="#0F1B4C"
-          color="#fff"
-          buttonText="Register"
-        />
+        {/* <NavLink variant="body2">Sign Up</NavLink> */}
+        {user ? <UserMenu user={user} /> : <div onClick={() => setModal(true)}>
+          <CustomButton
+            backgroundColor="#0F1B4C"
+            color="#fff"
+            buttonText="Login"
+          />
+        </div>}
       </Box>
     </NavbarContainer>
   );
