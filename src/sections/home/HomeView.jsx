@@ -4,6 +4,7 @@ import Guide from "./Guide";
 import Trending from "./Trending";
 import Details from "./Details";
 import Contact from "./Contact";
+import Blog from "./Blog";
 
 const HomeView = () => {
   return (
@@ -12,10 +13,11 @@ const HomeView = () => {
       <Hero />
       {/* product */}
       <Companies />
-      <Guide />
       <Trending />
       <Details />
+      <Blog />
       <Contact />
+      <Guide />
     </>
   );
 };

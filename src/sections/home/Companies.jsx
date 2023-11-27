@@ -1,7 +1,7 @@
 import { Box, Container, styled, Typography } from "@mui/material";
 import starImg from "~/assets/Star.png";
-import logosImg from "~/assets/logos.png";
 import Logo from "~/components/logo/Logo";
+import HotSales from "./HotSales";
 
 const Companies = () => {
   const CustomContainer = styled(Container)(({ theme }) => ({
@@ -54,10 +54,7 @@ const Companies = () => {
           </Typography>
         </Box>
       </CustomContainer>
-
-      <Container sx={{ display: "flex", flexDirection: "column" }}>
-        <img src={logosImg} alt="logos" />
-      </Container>
+      <HotSales />
     </Box>
   );
 };

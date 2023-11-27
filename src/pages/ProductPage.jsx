@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import ProductPageView from "~/sections/products/ProductPageView";
 
 const ProductPage = () => {
   return (
@@ -6,7 +7,7 @@ const ProductPage = () => {
       <Helmet>
         <title> Product | TuliBear </title>
       </Helmet>
-      <div>ProductPage</div>
+      <ProductPageView />
     </>
   );
 };

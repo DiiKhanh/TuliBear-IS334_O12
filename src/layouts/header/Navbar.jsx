@@ -22,6 +22,7 @@ import { useState } from "react";
 import { useAppStore } from "~/store/useAppStore";
 import useAuthUser from "~/hooks/useAuthUser";
 import UserMenu from "./UserMenu";
+import { useNavigate } from "react-router-dom";
 
 export const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState({
@@ -29,6 +30,7 @@ export const Navbar = () => {
   });
   const { setModal } = useAppStore();
   const user = useAuthUser();
+  const navigate = useNavigate();
   const toggleDrawer = (anchor, open) => (event) => {
     if (
       event.type === "keydown" &&
@@ -50,7 +52,9 @@ export const Navbar = () => {
       <List>
         {["Home", "Products", "Services", "Blog", "Contact"].map(
           (text, index) => (
-            <ListItem key={text} disablePadding>
+            <ListItem key={text} disablePadding
+              onClick={() => navigate(text.toLowerCase())}
+            >
               <ListItemButton>
                 <ListItemIcon>
                   {index === 0 && <HomeIcon />}
@@ -141,8 +145,10 @@ export const Navbar = () => {
         </Box>
 
         <NavbarLinksBox>
-          <NavLink variant="body2">Home</NavLink>
-          <NavLink variant="body2">Products</NavLink>
+          <NavLink variant="body2" onClick={() => navigate("")}>Home</NavLink>
+          <NavLink variant="body2"
+            onClick={() => navigate("product")}
+          >Products</NavLink>
           <NavLink variant="body2">Services</NavLink>
           <NavLink variant="body2">Blog</NavLink>
           <NavLink variant="body2">Contact</NavLink>
