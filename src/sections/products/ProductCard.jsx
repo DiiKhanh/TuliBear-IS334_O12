@@ -5,11 +5,13 @@ import Link from "@mui/material/Link";
 import Card from "@mui/material/Card";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
 
 
 import Label from "~/components/label/Label";
 
 import { valueLabelFormat } from "~/utils/format.js";
+import RouterLink from "~/routes/RouterLink";
 
 // ----------------------------------------------------------------------
 
@@ -64,22 +66,22 @@ export default function ShopProductCard({ product }) {
   );
 
   return (
-    <Card>
+    <Card sx={{ cursor:"pointer" }}>
       <Box sx={{ pt: "100%", position: "relative" }}>
         {product.status && renderStatus}
 
         {renderImg}
       </Box>
 
-      <Stack spacing={2} sx={{ p: 3 }}>
-        <Link color="inherit" underline="hover" variant="subtitle2" noWrap>
+      <Stack spacing={2} sx={{ p: 3 }} alignItems="center">
+        <Link color="inherit" underline="hover" variant="subtitle2" noWrap component={RouterLink} href={`${product.id}`}>
           {product.name}
         </Link>
 
-        <Stack direction="row" alignItems="center" justifyContent="space-between">
-
+        <Stack direction="row" alignItems="center" justifyContent="center">
           {renderPrice}
         </Stack>
+        <Button variant="contained">Mua ngay</Button>
       </Stack>
     </Card>
   );

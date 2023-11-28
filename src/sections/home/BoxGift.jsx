@@ -14,7 +14,8 @@ const BoxGift = ({ img, price, description, views, likes, reviews }) => {
     margin: theme.spacing(0, 2, 0, 2),
     [theme.breakpoints.down("md")]: {
       margin: theme.spacing(2, 0, 2, 0)
-    }
+    },
+    cursor:"pointer"
   }));
 
   const InfoBox = styled(Box)(() => ({

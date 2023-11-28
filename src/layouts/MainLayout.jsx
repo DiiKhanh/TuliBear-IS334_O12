@@ -16,7 +16,7 @@ export default function DashboardLayout() {
 
   return (
     <React.Fragment>
-      <Toaster position="top-right"
+      <Toaster position="top-right" expand closeButton visibleToasts={3}
         toastOptions={{
           style: {
             background: "green",
