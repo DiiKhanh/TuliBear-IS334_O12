@@ -44,17 +44,19 @@ export const productsPage = [
     priceSale: 180000,
     cover: "https://scontent.fhan3-5.fna.fbcdn.net/v/t1.15752-9/330936447_1348756212631608_7993833024753536847_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHVUuSma7Zto3VAOnL3l-ndFYLwxexPPcIVgvDF7E89wmo3BTW3JoVWCAzpg_c4SNcdhcNobrNh8PRXKvs4m73a&_nc_ohc=frRJy9Caia0AX-ERzZs&_nc_ht=scontent.fhan3-5.fna&oh=03_AdQszVJ26INyEbx0rxiG6bVulAUOu3JeIYe01TcyGnb-Qg&oe=658C413E",
     images: ["https://scontent.fhan3-5.fna.fbcdn.net/v/t1.15752-9/330936447_1348756212631608_7993833024753536847_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHVUuSma7Zto3VAOnL3l-ndFYLwxexPPcIVgvDF7E89wmo3BTW3JoVWCAzpg_c4SNcdhcNobrNh8PRXKvs4m73a&_nc_ohc=frRJy9Caia0AX-ERzZs&_nc_ht=scontent.fhan3-5.fna&oh=03_AdQszVJ26INyEbx0rxiG6bVulAUOu3JeIYe01TcyGnb-Qg&oe=658C413E", "https://scontent.fhan3-5.fna.fbcdn.net/v/t1.15752-9/330936447_1348756212631608_7993833024753536847_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHVUuSma7Zto3VAOnL3l-ndFYLwxexPPcIVgvDF7E89wmo3BTW3JoVWCAzpg_c4SNcdhcNobrNh8PRXKvs4m73a&_nc_ohc=frRJy9Caia0AX-ERzZs&_nc_ht=scontent.fhan3-5.fna&oh=03_AdQszVJ26INyEbx0rxiG6bVulAUOu3JeIYe01TcyGnb-Qg&oe=658C413E", "https://scontent.fhan3-5.fna.fbcdn.net/v/t1.15752-9/330936447_1348756212631608_7993833024753536847_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHVUuSma7Zto3VAOnL3l-ndFYLwxexPPcIVgvDF7E89wmo3BTW3JoVWCAzpg_c4SNcdhcNobrNh8PRXKvs4m73a&_nc_ohc=frRJy9Caia0AX-ERzZs&_nc_ht=scontent.fhan3-5.fna&oh=03_AdQszVJ26INyEbx0rxiG6bVulAUOu3JeIYe01TcyGnb-Qg&oe=658C413E"],
-    description: "Sản phẩm thích hợp để mua tặng người yêu"
+    description: "Sản phẩm thích hợp để mua tặng người yêu",
+    inStock: 5
   },
   {
     id: 2,
     price: 200000,
     name: "Hộp quà tặng 2",
     status: "new",
-    // priceSale: 180000,
+    priceSale: 180000,
     cover: "https://scontent.fhan3-5.fna.fbcdn.net/v/t1.15752-9/330936447_1348756212631608_7993833024753536847_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHVUuSma7Zto3VAOnL3l-ndFYLwxexPPcIVgvDF7E89wmo3BTW3JoVWCAzpg_c4SNcdhcNobrNh8PRXKvs4m73a&_nc_ohc=frRJy9Caia0AX-ERzZs&_nc_ht=scontent.fhan3-5.fna&oh=03_AdQszVJ26INyEbx0rxiG6bVulAUOu3JeIYe01TcyGnb-Qg&oe=658C413E",
     images: ["https://scontent.fhan3-5.fna.fbcdn.net/v/t1.15752-9/330936447_1348756212631608_7993833024753536847_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHVUuSma7Zto3VAOnL3l-ndFYLwxexPPcIVgvDF7E89wmo3BTW3JoVWCAzpg_c4SNcdhcNobrNh8PRXKvs4m73a&_nc_ohc=frRJy9Caia0AX-ERzZs&_nc_ht=scontent.fhan3-5.fna&oh=03_AdQszVJ26INyEbx0rxiG6bVulAUOu3JeIYe01TcyGnb-Qg&oe=658C413E", "https://scontent.fhan3-5.fna.fbcdn.net/v/t1.15752-9/330936447_1348756212631608_7993833024753536847_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHVUuSma7Zto3VAOnL3l-ndFYLwxexPPcIVgvDF7E89wmo3BTW3JoVWCAzpg_c4SNcdhcNobrNh8PRXKvs4m73a&_nc_ohc=frRJy9Caia0AX-ERzZs&_nc_ht=scontent.fhan3-5.fna&oh=03_AdQszVJ26INyEbx0rxiG6bVulAUOu3JeIYe01TcyGnb-Qg&oe=658C413E", "https://scontent.fhan3-5.fna.fbcdn.net/v/t1.15752-9/330936447_1348756212631608_7993833024753536847_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHVUuSma7Zto3VAOnL3l-ndFYLwxexPPcIVgvDF7E89wmo3BTW3JoVWCAzpg_c4SNcdhcNobrNh8PRXKvs4m73a&_nc_ohc=frRJy9Caia0AX-ERzZs&_nc_ht=scontent.fhan3-5.fna&oh=03_AdQszVJ26INyEbx0rxiG6bVulAUOu3JeIYe01TcyGnb-Qg&oe=658C413E"],
-    description: "Sản phẩm thích hợp để mua tặng người yêu"
+    description: "Sản phẩm thích hợp để mua tặng người yêu",
+    inStock: 5
   },
   {
     id: 3,
@@ -64,7 +66,8 @@ export const productsPage = [
     // priceSale: 180000,
     cover: "https://scontent.fhan3-5.fna.fbcdn.net/v/t1.15752-9/330936447_1348756212631608_7993833024753536847_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHVUuSma7Zto3VAOnL3l-ndFYLwxexPPcIVgvDF7E89wmo3BTW3JoVWCAzpg_c4SNcdhcNobrNh8PRXKvs4m73a&_nc_ohc=frRJy9Caia0AX-ERzZs&_nc_ht=scontent.fhan3-5.fna&oh=03_AdQszVJ26INyEbx0rxiG6bVulAUOu3JeIYe01TcyGnb-Qg&oe=658C413E",
     images: ["https://scontent.fhan3-5.fna.fbcdn.net/v/t1.15752-9/330936447_1348756212631608_7993833024753536847_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHVUuSma7Zto3VAOnL3l-ndFYLwxexPPcIVgvDF7E89wmo3BTW3JoVWCAzpg_c4SNcdhcNobrNh8PRXKvs4m73a&_nc_ohc=frRJy9Caia0AX-ERzZs&_nc_ht=scontent.fhan3-5.fna&oh=03_AdQszVJ26INyEbx0rxiG6bVulAUOu3JeIYe01TcyGnb-Qg&oe=658C413E", "https://scontent.fhan3-5.fna.fbcdn.net/v/t1.15752-9/330936447_1348756212631608_7993833024753536847_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHVUuSma7Zto3VAOnL3l-ndFYLwxexPPcIVgvDF7E89wmo3BTW3JoVWCAzpg_c4SNcdhcNobrNh8PRXKvs4m73a&_nc_ohc=frRJy9Caia0AX-ERzZs&_nc_ht=scontent.fhan3-5.fna&oh=03_AdQszVJ26INyEbx0rxiG6bVulAUOu3JeIYe01TcyGnb-Qg&oe=658C413E", "https://scontent.fhan3-5.fna.fbcdn.net/v/t1.15752-9/330936447_1348756212631608_7993833024753536847_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHVUuSma7Zto3VAOnL3l-ndFYLwxexPPcIVgvDF7E89wmo3BTW3JoVWCAzpg_c4SNcdhcNobrNh8PRXKvs4m73a&_nc_ohc=frRJy9Caia0AX-ERzZs&_nc_ht=scontent.fhan3-5.fna&oh=03_AdQszVJ26INyEbx0rxiG6bVulAUOu3JeIYe01TcyGnb-Qg&oe=658C413E"],
-    description: "Sản phẩm thích hợp để mua tặng người yêu"
+    description: "Sản phẩm thích hợp để mua tặng người yêu",
+    inStock: 5
   },
   {
     id: 4,
@@ -74,7 +77,8 @@ export const productsPage = [
     // priceSale: 180000,
     cover: "https://scontent.fhan3-5.fna.fbcdn.net/v/t1.15752-9/330936447_1348756212631608_7993833024753536847_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHVUuSma7Zto3VAOnL3l-ndFYLwxexPPcIVgvDF7E89wmo3BTW3JoVWCAzpg_c4SNcdhcNobrNh8PRXKvs4m73a&_nc_ohc=frRJy9Caia0AX-ERzZs&_nc_ht=scontent.fhan3-5.fna&oh=03_AdQszVJ26INyEbx0rxiG6bVulAUOu3JeIYe01TcyGnb-Qg&oe=658C413E",
     images: ["https://scontent.fhan3-5.fna.fbcdn.net/v/t1.15752-9/330936447_1348756212631608_7993833024753536847_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHVUuSma7Zto3VAOnL3l-ndFYLwxexPPcIVgvDF7E89wmo3BTW3JoVWCAzpg_c4SNcdhcNobrNh8PRXKvs4m73a&_nc_ohc=frRJy9Caia0AX-ERzZs&_nc_ht=scontent.fhan3-5.fna&oh=03_AdQszVJ26INyEbx0rxiG6bVulAUOu3JeIYe01TcyGnb-Qg&oe=658C413E", "https://scontent.fhan3-5.fna.fbcdn.net/v/t1.15752-9/330936447_1348756212631608_7993833024753536847_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHVUuSma7Zto3VAOnL3l-ndFYLwxexPPcIVgvDF7E89wmo3BTW3JoVWCAzpg_c4SNcdhcNobrNh8PRXKvs4m73a&_nc_ohc=frRJy9Caia0AX-ERzZs&_nc_ht=scontent.fhan3-5.fna&oh=03_AdQszVJ26INyEbx0rxiG6bVulAUOu3JeIYe01TcyGnb-Qg&oe=658C413E", "https://scontent.fhan3-5.fna.fbcdn.net/v/t1.15752-9/330936447_1348756212631608_7993833024753536847_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHVUuSma7Zto3VAOnL3l-ndFYLwxexPPcIVgvDF7E89wmo3BTW3JoVWCAzpg_c4SNcdhcNobrNh8PRXKvs4m73a&_nc_ohc=frRJy9Caia0AX-ERzZs&_nc_ht=scontent.fhan3-5.fna&oh=03_AdQszVJ26INyEbx0rxiG6bVulAUOu3JeIYe01TcyGnb-Qg&oe=658C413E"],
-    description: "Sản phẩm thích hợp để mua tặng người yêu"
+    description: "Sản phẩm thích hợp để mua tặng người yêu",
+    inStock: 5
   },
   {
     id: 5,
@@ -84,7 +88,8 @@ export const productsPage = [
     // priceSale: 180000,
     cover: "https://scontent.fhan3-5.fna.fbcdn.net/v/t1.15752-9/330936447_1348756212631608_7993833024753536847_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHVUuSma7Zto3VAOnL3l-ndFYLwxexPPcIVgvDF7E89wmo3BTW3JoVWCAzpg_c4SNcdhcNobrNh8PRXKvs4m73a&_nc_ohc=frRJy9Caia0AX-ERzZs&_nc_ht=scontent.fhan3-5.fna&oh=03_AdQszVJ26INyEbx0rxiG6bVulAUOu3JeIYe01TcyGnb-Qg&oe=658C413E",
     images: ["https://scontent.fhan3-5.fna.fbcdn.net/v/t1.15752-9/330936447_1348756212631608_7993833024753536847_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHVUuSma7Zto3VAOnL3l-ndFYLwxexPPcIVgvDF7E89wmo3BTW3JoVWCAzpg_c4SNcdhcNobrNh8PRXKvs4m73a&_nc_ohc=frRJy9Caia0AX-ERzZs&_nc_ht=scontent.fhan3-5.fna&oh=03_AdQszVJ26INyEbx0rxiG6bVulAUOu3JeIYe01TcyGnb-Qg&oe=658C413E", "https://scontent.fhan3-5.fna.fbcdn.net/v/t1.15752-9/330936447_1348756212631608_7993833024753536847_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHVUuSma7Zto3VAOnL3l-ndFYLwxexPPcIVgvDF7E89wmo3BTW3JoVWCAzpg_c4SNcdhcNobrNh8PRXKvs4m73a&_nc_ohc=frRJy9Caia0AX-ERzZs&_nc_ht=scontent.fhan3-5.fna&oh=03_AdQszVJ26INyEbx0rxiG6bVulAUOu3JeIYe01TcyGnb-Qg&oe=658C413E", "https://scontent.fhan3-5.fna.fbcdn.net/v/t1.15752-9/330936447_1348756212631608_7993833024753536847_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHVUuSma7Zto3VAOnL3l-ndFYLwxexPPcIVgvDF7E89wmo3BTW3JoVWCAzpg_c4SNcdhcNobrNh8PRXKvs4m73a&_nc_ohc=frRJy9Caia0AX-ERzZs&_nc_ht=scontent.fhan3-5.fna&oh=03_AdQszVJ26INyEbx0rxiG6bVulAUOu3JeIYe01TcyGnb-Qg&oe=658C413E"],
-    description: "Sản phẩm thích hợp để mua tặng người yêu"
+    description: "Sản phẩm thích hợp để mua tặng người yêu",
+    inStock: 5
   },
   {
     id: 6,
@@ -94,7 +99,8 @@ export const productsPage = [
     priceSale: 180000,
     cover: "https://scontent.fhan3-5.fna.fbcdn.net/v/t1.15752-9/330936447_1348756212631608_7993833024753536847_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHVUuSma7Zto3VAOnL3l-ndFYLwxexPPcIVgvDF7E89wmo3BTW3JoVWCAzpg_c4SNcdhcNobrNh8PRXKvs4m73a&_nc_ohc=frRJy9Caia0AX-ERzZs&_nc_ht=scontent.fhan3-5.fna&oh=03_AdQszVJ26INyEbx0rxiG6bVulAUOu3JeIYe01TcyGnb-Qg&oe=658C413E",
     images: ["https://scontent.fhan3-5.fna.fbcdn.net/v/t1.15752-9/330936447_1348756212631608_7993833024753536847_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHVUuSma7Zto3VAOnL3l-ndFYLwxexPPcIVgvDF7E89wmo3BTW3JoVWCAzpg_c4SNcdhcNobrNh8PRXKvs4m73a&_nc_ohc=frRJy9Caia0AX-ERzZs&_nc_ht=scontent.fhan3-5.fna&oh=03_AdQszVJ26INyEbx0rxiG6bVulAUOu3JeIYe01TcyGnb-Qg&oe=658C413E", "https://scontent.fhan3-5.fna.fbcdn.net/v/t1.15752-9/330936447_1348756212631608_7993833024753536847_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHVUuSma7Zto3VAOnL3l-ndFYLwxexPPcIVgvDF7E89wmo3BTW3JoVWCAzpg_c4SNcdhcNobrNh8PRXKvs4m73a&_nc_ohc=frRJy9Caia0AX-ERzZs&_nc_ht=scontent.fhan3-5.fna&oh=03_AdQszVJ26INyEbx0rxiG6bVulAUOu3JeIYe01TcyGnb-Qg&oe=658C413E", "https://scontent.fhan3-5.fna.fbcdn.net/v/t1.15752-9/330936447_1348756212631608_7993833024753536847_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHVUuSma7Zto3VAOnL3l-ndFYLwxexPPcIVgvDF7E89wmo3BTW3JoVWCAzpg_c4SNcdhcNobrNh8PRXKvs4m73a&_nc_ohc=frRJy9Caia0AX-ERzZs&_nc_ht=scontent.fhan3-5.fna&oh=03_AdQszVJ26INyEbx0rxiG6bVulAUOu3JeIYe01TcyGnb-Qg&oe=658C413E"],
-    description: "Sản phẩm thích hợp để mua tặng người yêu"
+    description: "Sản phẩm thích hợp để mua tặng người yêu",
+    inStock: 5
   }
 ];
 

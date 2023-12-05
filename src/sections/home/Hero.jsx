@@ -105,7 +105,7 @@ const Hero = () => {
                 <motion.span
                   variants={child}
                   style={{ marginRight: "10px" }}
-                  key={index}
+                  key={word+index}
                 >
                   {word}
                 </motion.span>

@@ -1,8 +1,22 @@
+import numeral from "numeral";
+
 export const valueLabelFormat = (value) => {
   if (!value) return;
   value = value.toLocaleString("vi-VN", { style: "currency", currency: "VND" });
   return `${value}`;
 };
+
+function result(format, key = ".00") {
+  const isInteger = format.includes(key);
+
+  return isInteger ? format.replace(key, "") : format;
+}
+
+export function fShortenNumber(number) {
+  const format = number ? numeral(number).format("0.00a") : "";
+
+  return result(format, ".00");
+}
 
 //-----------------------
 export const visuallyHidden = {

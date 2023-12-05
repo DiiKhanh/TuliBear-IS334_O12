@@ -36,8 +36,8 @@ const Blog = () => {
 
         <PropertiesBox>
           {
-            Array(3).fill().map((i) => (
-              <React.Fragment key={i}>
+            Array(3).fill().map((i, idx) => (
+              <React.Fragment key={i+idx}>
                 <BlogCard />
               </React.Fragment>
             ))

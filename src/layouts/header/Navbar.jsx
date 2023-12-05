@@ -20,16 +20,26 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import { useAppStore } from "~/store/useAppStore";
-import useAuthUser from "~/hooks/useAuthUser";
+// import useAuthUser from "~/hooks/useAuthUser";
 import UserMenu from "./UserMenu";
 import { useNavigate } from "react-router-dom";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import Badge from "@mui/material/Badge";
+import CartDrawer from "~/sections/cart/CartDrawer";
+import { useCartStore } from "~/store/useCartStore";
+import { useUserStore } from "~/store/useUserStore";
 
 export const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState({
     left: false
   });
   const { setModal } = useAppStore();
-  const user = useAuthUser();
+
+  const { cartItems } = useCartStore();
+  const cartCount = cartItems.length;
+
+  // const user = useAuthUser();
+  const { user } = useUserStore();
   const navigate = useNavigate();
   const toggleDrawer = (anchor, open) => (event) => {
     if (
@@ -42,6 +52,21 @@ export const Navbar = () => {
     setMobileMenu({ ...mobileMenu, [anchor]: open });
   };
 
+  const [state, setState] = useState({
+    right: false
+  });
+
+  const toggleCartDrawer = (anchor, open) => (event) => {
+    if (
+      event &&
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
+      return;
+    }
+    setState({ ...state, [anchor]: open });
+  };
+
   const list = (anchor) => (
     <Box
       sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
@@ -52,7 +77,7 @@ export const Navbar = () => {
       <List>
         {["Home", "Products", "Services", "Blog", "Contact"].map(
           (text, index) => (
-            <ListItem key={text} disablePadding
+            <ListItem key={index} disablePadding
               onClick={() => navigate(text.toLowerCase())}
             >
               <ListItemButton>
@@ -145,13 +170,19 @@ export const Navbar = () => {
         </Box>
 
         <NavbarLinksBox>
-          <NavLink variant="body2" onClick={() => navigate("")}>Home</NavLink>
+          <NavLink variant="body2" onClick={() => navigate("")}>Trang chủ</NavLink>
           <NavLink variant="body2"
             onClick={() => navigate("product")}
-          >Products</NavLink>
-          <NavLink variant="body2">Services</NavLink>
-          <NavLink variant="body2">Blog</NavLink>
-          <NavLink variant="body2">Contact</NavLink>
+          >Sản phẩm</NavLink>
+          <NavLink variant="body2"
+            onClick={() => navigate("service")}
+          >Dịch vụ</NavLink>
+          <NavLink variant="body2"
+            onClick={() => navigate("blog")}
+          >Blog</NavLink>
+          <NavLink variant="body2"
+            onClick={() => navigate("contact")}
+          >Liên hệ</NavLink>
         </NavbarLinksBox>
       </Box>
 
@@ -159,19 +190,26 @@ export const Navbar = () => {
         sx={{
           display: "flex",
           alignItems: "center",
-          justifyContent: "center"
-          // gap: "1rem"
+          justifyContent: "center",
+          gap: "1rem"
         }}
       >
-        {/* <NavLink variant="body2">Sign Up</NavLink> */}
-        {user ? <UserMenu user={user} /> : <div onClick={() => setModal(true)}>
+        {user ? <>
+          <Badge badgeContent={cartCount} color="primary" sx={{ cursor:"pointer" }}
+            onClick={toggleCartDrawer("right", true)}
+          >
+            <AddShoppingCartIcon />
+          </Badge>
+          <UserMenu user={user} />
+        </> : <div onClick={() => setModal(true)}>
           <CustomButton
             backgroundColor="#0F1B4C"
             color="#fff"
-            buttonText="Login"
+            buttonText="Đăng nhập"
           />
         </div>}
       </Box>
+      <CartDrawer toggleCartDrawer={toggleCartDrawer} state={state}/>
     </NavbarContainer>
   );
 };

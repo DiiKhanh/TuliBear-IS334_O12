@@ -22,11 +22,11 @@ const ThumbsGallery = ({ image }) => {
           "--swiper-navigation-color": "#fff",
           "--swiper-pagination-color": "#fff"
         }}
-        // grabCursor={true}
         spaceBetween={10}
         navigation={true}
+        freeMode={true}
         thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }}
-        modules={[FreeMode, Navigation, Thumbs, Zoom]}
+        modules={[Navigation, Thumbs, Zoom, FreeMode]}
         zoom={true}
       >
         {
@@ -35,8 +35,7 @@ const ThumbsGallery = ({ image }) => {
               <div className="swiper-zoom-container">
                 <img src={i}
                   style={{ width:"100%",
-                    // aspectRatio:"auto 680 / 453",
-                    aspectRatio:"1/0.9",
+                    aspectRatio:"2/1.5",
                     verticalAlign:"middle", borderRadius:"5px", objectFit:"cover" }}
                   loading="lazy"
                 />
@@ -46,6 +45,10 @@ const ThumbsGallery = ({ image }) => {
         }
       </Swiper>
       <Box sx={{
+        "& .swiper": {
+          height:"auto",
+          boxShadow:"none"
+        },
         "& .swiper-slide-thumb-active":{
           opacity:"1 !important"
         }
@@ -67,8 +70,7 @@ const ThumbsGallery = ({ image }) => {
               }}>
                 <img src={i}
                   style={{ width:"100%",
-                    // aspectRatio:"auto 680 / 453",
-                    aspectRatio:"1/0.85",
+                    aspectRatio:"0.5/0.5",
                     verticalAlign:"middle", borderRadius:"5px", objectFit:"cover" }}
                   loading="lazy"
                 />

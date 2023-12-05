@@ -1,5 +1,6 @@
 import { styled, Typography } from "@mui/material";
 import { Box, Container } from "@mui/system";
+import { useNavigate } from "react-router-dom";
 import logo from "~/assets/logo.png";
 import CustomButton from "~/layouts/header/CustomButton";
 
@@ -28,6 +29,8 @@ const Contact = () => {
     }
   }));
 
+  const navigate = useNavigate();
+
   return (
     <CustomBox>
       <CustomContainer>
@@ -42,13 +45,14 @@ const Contact = () => {
           >
             Everything you need to know about Tulibear!
           </Typography>
-
-          <CustomButton
-            backgroundColor="#fff"
-            color="#17275F"
-            buttonText="Contact Now"
-            getStartedBtn={true}
-          />
+          <div onClick={() => navigate("contact")}>
+            <CustomButton
+              backgroundColor="#fff"
+              color="#17275F"
+              buttonText="Contact Now"
+              getStartedBtn={true}
+            />
+          </div>
         </Box>
 
         <img

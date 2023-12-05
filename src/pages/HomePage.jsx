@@ -7,7 +7,6 @@ const HomePage = () => {
       <Helmet>
         <title> Home | TuliBear </title>
       </Helmet>
-
       <HomeView />
     </>
   );

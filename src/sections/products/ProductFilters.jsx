@@ -16,6 +16,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import FilterListIcon from "@mui/icons-material/FilterList";
 
 import ScrollBar from "~/components/scrollbar/ScrollBar";
+import ClearIcon from "@mui/icons-material/Clear";
 
 
 // ----------------------------------------------------------------------
@@ -26,8 +27,8 @@ export const SORT_OPTIONS = [
   { value: "priceDesc", label: "Price: High-Low" },
   { value: "priceAsc", label: "Price: Low-High" }
 ];
-export const GENDER_OPTIONS = ["Men", "Women", "Kids"];
-export const CATEGORY_OPTIONS = ["All", "Shose", "Apparel", "Accessories"];
+export const GENDER_OPTIONS = ["New", "Sale", "Hot"];
+export const CATEGORY_OPTIONS = ["All", "Bear", "Flower"];
 export const RATING_OPTIONS = ["up4Star", "up3Star", "up2Star", "up1Star"];
 export const PRICE_OPTIONS = [
   { value: "below", label: "Below $25" },
@@ -60,12 +61,6 @@ export default function ProductFilters({ openFilter, onOpenFilter, onCloseFilter
     </Stack>
   );
 
-  const renderColors = (
-    <Stack spacing={1}>
-      <Typography variant="subtitle2">Colors</Typography>
-
-    </Stack>
-  );
 
   const renderPrice = (
     <Stack spacing={1}>
@@ -140,7 +135,7 @@ export default function ProductFilters({ openFilter, onOpenFilter, onCloseFilter
           sx={{ px: 1, py: 2 }}
         >
           <Typography variant="h6" sx={{ ml: 1 }}>
-            Filters
+            Bộ lọc
           </Typography>
           <IconButton onClick={onCloseFilter}>
             {/* <Iconify icon="eva:close-fill" /> */}
@@ -155,7 +150,7 @@ export default function ProductFilters({ openFilter, onOpenFilter, onCloseFilter
 
             {renderCategory}
 
-            {renderColors}
+            {/* {renderColors} */}
 
             {renderPrice}
 
@@ -170,9 +165,9 @@ export default function ProductFilters({ openFilter, onOpenFilter, onCloseFilter
             type="submit"
             color="inherit"
             variant="outlined"
-            // startIcon={<Iconify icon="ic:round-clear-all" />}
+            startIcon={<ClearIcon />}
           >
-            Clear All
+            Xóa tất cả
           </Button>
         </Box>
       </Drawer>

@@ -1,12 +1,14 @@
 import { Outlet } from "react-router-dom";
 
 import Box from "@mui/material/Box";
-import React from "react";
+import React, { useEffect } from "react";
 import Footer from "./footer/Footer";
 import Header from "./header/Header";
 import Login from "./header/Login";
 
 import { Toaster } from "sonner";
+import useAuthUser from "~/hooks/useAuthUser";
+import { useUserStore } from "~/store/useUserStore";
 // ----------------------------------------------------------------------
 
 
@@ -14,10 +16,18 @@ import { Toaster } from "sonner";
 
 export default function DashboardLayout() {
 
+  const user = useAuthUser();
+  const { saveUser } = useUserStore();
+
+  useEffect(() => {
+    saveUser(user);
+  }, [user, saveUser]);
+
   return (
     <React.Fragment>
       <Toaster position="top-right" expand closeButton visibleToasts={3}
         toastOptions={{
+          duration:1000,
           style: {
             background: "green",
             color:"white"

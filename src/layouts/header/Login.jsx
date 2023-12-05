@@ -8,6 +8,9 @@ import { createSvgIcon } from "@mui/material/utils";
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { auth } from "~/configs/firebase.config";
 import { toast } from "sonner";
+import useAuthUser from "~/hooks/useAuthUser";
+import { useUserStore } from "~/store/useUserStore";
+import { useEffect } from "react";
 
 const GoogleIcon = createSvgIcon(
   <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
@@ -32,11 +35,25 @@ const style = {
 export default function Login() {
   const { isShowModal, setModal } = useAppStore();
   const [signInWithGoogle] = useSignInWithGoogle(auth);
+  // const user = useAuthUser();
+  // const { saveUser } = useUserStore();
+
   const handleLogin = async () => {
-    await signInWithGoogle();
-    setModal(false);
-    toast.success("Đăng nhập thành công!");
+    try {
+      await signInWithGoogle();
+      toast.success("Đăng nhập thành công!");
+      // saveUser
+    } catch (error) {
+      toast.error(`Có lỗi khi đăng nhập ${error}`);
+    } finally {
+      setModal(false);
+    }
   };
+
+  // useEffect(() => {
+  //   saveUser(user);
+
+  // }, [user, saveUser]);
 
   return (
     <div>

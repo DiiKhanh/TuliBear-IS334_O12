@@ -10,6 +10,8 @@ import { toast } from "sonner";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
+import { useUserStore } from "~/store/useUserStore";
+import { useOrderStore } from "~/store/useOrderStore";
 
 const menuConfigs = [
   {
@@ -18,7 +20,8 @@ const menuConfigs = [
   },
   {
     name: "Giỏ hàng",
-    icon: <AddShoppingCartIcon />
+    icon: <AddShoppingCartIcon />,
+    path: "cart"
   },
   {
     name: "Lịch sử mua hàng",
@@ -31,10 +34,13 @@ const UserMenu = ({ user }) => {
   const [anchorEl, setAnchorEl] = useState(null);
 
   const toggleMenu = (e) => setAnchorEl(e.currentTarget);
+  const { deleteUser } = useUserStore();
+  const { removeOrder } = useOrderStore();
 
   const handlLogout = () => {
     signOut(auth).then(() => {
-      // Sign-out successful.
+      deleteUser();
+      removeOrder();
       toast.success("Đăng xuất thành công!");
     }).catch((error) => {
       toast.error(`Có lỗi xảy ra, ${error}`);
@@ -61,7 +67,7 @@ const UserMenu = ({ user }) => {
         {menuConfigs.map((item, index) => (
           <ListItemButton
             component={Link}
-            to={item}
+            to={item.path}
             key={index}
             onClick={() => setAnchorEl(null)}
           >
@@ -77,7 +83,7 @@ const UserMenu = ({ user }) => {
         >
           <ListItemIcon><LogoutOutlinedIcon /></ListItemIcon>
           <ListItemText disableTypography primary={
-            <Typography textTransform='uppercase'>Log out</Typography>
+            <Typography textTransform='uppercase'>Đăng xuất</Typography>
           } />
         </ListItemButton>
       </Menu>
