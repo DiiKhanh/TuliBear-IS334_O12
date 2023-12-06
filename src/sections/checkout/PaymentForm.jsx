@@ -6,16 +6,17 @@ import Payment from "./Payment";
 import { useState } from "react";
 import { toast } from "sonner";
 import Review from "./Review";
-import { useUserStore } from "~/store/useUserStore";
 import { useNavigate } from "react-router-dom";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import { useOrderStore } from "~/store/useOrderStore";
 import { useCartStore } from "~/store/useCartStore";
+import StripeView from "./StripeView";
+import { usePaymentStore } from "~/store/usePaymentStore";
 
 export default function PaymentForm() {
   const [paymentMethod, setPaymentMethod] = useState("cod");
-  const { user } = useUserStore();
+  const { shipping } = usePaymentStore();
   const { removeOrder } = useOrderStore();
   const { clearCart } = useCartStore();
   const navigate = useNavigate();
@@ -28,19 +29,29 @@ export default function PaymentForm() {
       // Chuyển hướng tới route mới
       navigate("/checkout/success", {
         state: {
-          email: user.email,
-          name: user.displayName,
+          email: shipping.email,
+          name: shipping.firstName,
           method: "cod"
         }
       });
       return;
     }
+
+    if (paymentMethod === "online-payment-stripe") {
+      return;
+    }
+
+    if (paymentMethod === "online-payment-vnpay") {
+      return;
+    }
+
+    // post email to backend to send email
+
   };
 
   const changePaymentMethodHandler = (e) => {
     setPaymentMethod(e.target.value);
   };
-
 
   return (
     <>
@@ -56,6 +67,9 @@ export default function PaymentForm() {
         </Grid>
 
         <Grid item xs={12}>
+          {
+            paymentMethod === "online-payment-stripe" && <StripeView />
+          }
           <FormControlLabel
             control={<Checkbox color="primary" name="saveCard" value="yes" />}
             label="Ghi nhớ tài khoản thanh toán cho lần tiếp theo"

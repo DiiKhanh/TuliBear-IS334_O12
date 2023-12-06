@@ -10,6 +10,7 @@ import Typography from "@mui/material/Typography";
 import AddressForm from "./AddressForm";
 import PaymentForm from "./PaymentForm";
 import ListOrder from "./ListOrder";
+import { useOrderStore } from "~/store/useOrderStore";
 
 const steps = ["Danh sách sản phẩm", "Thông tin giao hàng", "Thông tin thanh toán"];
 
@@ -36,6 +37,8 @@ const CheckoutView = () => {
   const handleBack = () => {
     setActiveStep(activeStep - 1);
   };
+
+  const { orderList } = useOrderStore();
 
   return (
     <>
@@ -71,8 +74,10 @@ const CheckoutView = () => {
               )}
 
               {activeStep < steps.length - 1 && (
-                <Button onClick={handleNext} sx={{ mt: 3, ml: 1 }} variant="contained">
-                    Tiếp tục
+                orderList.length === 0 ? <>
+                  Chưa có sản phẩm
+                </> : <Button onClick={handleNext} sx={{ mt: 3, ml: 1 }} variant="contained">
+                  Tiếp tục
                 </Button>
               )}
             </Box>

@@ -16,12 +16,12 @@ import { useUserStore } from "~/store/useUserStore";
 
 export default function DashboardLayout() {
 
-  const user = useAuthUser();
-  const { saveUser } = useUserStore();
+  // const user = useAuthUser();
+  // const { saveUser } = useUserStore();
 
-  useEffect(() => {
-    saveUser(user);
-  }, [user, saveUser]);
+  // useEffect(() => {
+  //   saveUser(user);
+  // }, [user, saveUser]);
 
   return (
     <React.Fragment>

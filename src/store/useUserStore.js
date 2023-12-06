@@ -8,9 +8,11 @@ export const useUserStore = create(
       user: null,
       saveUser:  (data) => {
         set({ user: data });
+        // localStorage.setItem("user-tl", JSON.stringify(data));
       },
       deleteUser: () => {
         set({ user: null });
+        // localStorage.removeItem("user-tl");
       }
     }),
     {

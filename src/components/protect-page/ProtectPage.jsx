@@ -5,11 +5,9 @@ import { useUserStore } from "~/store/useUserStore";
 
 const ProtectPage = ({ children }) => {
   const { user } = useUserStore();
-
   useEffect(() => {
-    if (!user) toast.success("Vui lòng đăng nhập để truy cập");
+    if (!user) toast.error("Vui lòng đăng nhập!");
   }, [user]);
-
   return (
     user ? children : <Navigate to="/" />
   );
