@@ -1,10 +1,8 @@
 import { Link, Button, Box } from "@mui/material";
 import Typography from "@mui/material/Typography";
-import { usePaymentStore } from "~/store/usePaymentStore";
 
 
 function FailedCheckout() {
-  const { shipping } = usePaymentStore();
   return (
     <>
       <Box sx={{ textAlign: "center" }}>

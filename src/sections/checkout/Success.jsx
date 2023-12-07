@@ -1,6 +1,4 @@
-import { Link, Button, Box } from "@mui/material";
 import Container from "@mui/material/Container";
-import Typography from "@mui/material/Typography";
 import { useLocation, useSearchParams } from "react-router-dom";
 import FailedCheckout from "./FailedCheckout";
 import SuccessCheckout from "./SuccessCheckout";

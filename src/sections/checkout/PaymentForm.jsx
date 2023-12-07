@@ -13,18 +13,17 @@ import { useOrderStore } from "~/store/useOrderStore";
 import { useCartStore } from "~/store/useCartStore";
 import StripeView from "./StripeView";
 import { usePaymentStore } from "~/store/usePaymentStore";
+import paymentApi from "~/apis/modules/payment.api";
 
 export default function PaymentForm() {
   const [paymentMethod, setPaymentMethod] = useState("cod");
   const { shipping } = usePaymentStore();
-  const { removeOrder } = useOrderStore();
-  const { clearCart } = useCartStore();
+  const { priceNow, orderList } = useOrderStore();
   const navigate = useNavigate();
 
-  const payHandler = () => {
+
+  const payHandler = async () => {
     if (paymentMethod === "cod") {
-      clearCart();
-      removeOrder();
       toast.success("Đặt hàng thành công!");
       // Chuyển hướng tới route mới
       navigate("/checkout/success", {
@@ -38,11 +37,28 @@ export default function PaymentForm() {
     }
 
     if (paymentMethod === "online-payment-stripe") {
+      navigate("/checkout/success", {
+        state: {
+          email: shipping.email,
+          name: shipping.firstName,
+          method: "stripe"
+        }
+      });
       return;
     }
 
     if (paymentMethod === "online-payment-vnpay") {
-      return;
+      const data = {
+        name: shipping.firstName,
+        email: shipping.email,
+        amount: priceNow,
+        address: shipping.address,
+        products: orderList
+      };
+      const link = await paymentApi.vnpay(data);
+      if (!link.vnpUrl) return null;
+      // Chuyển hướng đến link
+      window.location.href = link.vnpUrl;
     }
 
     // post email to backend to send email

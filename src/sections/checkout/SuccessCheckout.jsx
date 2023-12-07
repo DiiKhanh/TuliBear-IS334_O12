@@ -1,10 +1,46 @@
 import { Link, Button, Box } from "@mui/material";
 import Typography from "@mui/material/Typography";
+import { useEffect } from "react";
+import { toast } from "sonner";
+import paymentApi from "~/apis/modules/payment.api";
+import { useCartStore } from "~/store/useCartStore";
+import { useOrderStore } from "~/store/useOrderStore";
 import { usePaymentStore } from "~/store/usePaymentStore";
 
 
 function SuccessCheckout() {
   const { shipping } = usePaymentStore();
+  const { removeOrder, priceNow, orderList } = useOrderStore();
+  const { clearCart } = useCartStore();
+
+  useEffect(() => {
+    removeOrder();
+    clearCart();
+  }, []);
+
+  useEffect(() => {
+    const sendEmail = async () => {
+      const data = {
+        name: shipping.firstName,
+        email: shipping.email,
+        amount: priceNow,
+        address: shipping.address,
+        products: orderList
+      };
+      const { res, err } = await paymentApi.sendEmail(data);
+      if (err) {
+        toast.error("Có lỗi khi gửi email!");
+        return;
+      }
+      if (res.status === 200) {
+        toast.success("Đã gửi hóa đơn về email, vui lòng kiểm tra!");
+        return;
+      }
+
+    };
+    sendEmail();
+  }, [priceNow, orderList, shipping]);
+
   return (
     <>
       <Box sx={{ textAlign: "center" }}>
