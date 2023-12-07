@@ -11,7 +11,7 @@ export const ProductPage = lazy(() => import("~/pages/ProductPage"));
 export const ProductDetail = lazy(() => import("~/pages/ProductDetail"));
 export const CartPage = lazy(() => import("~/pages/CartPage"));
 export const CheckoutPage = lazy(() => import("~/pages/CheckoutPage"));
-export const SuccessCheckout = lazy(() => import("~/sections/checkout/Success"));
+export const SuccessCheckout = lazy(() => import("~/pages/SuccessPage"));
 export const BlogPage = lazy(() => import("~/pages/BlogPage"));
 export const ContactPage = lazy(() => import("~/pages/ContactPage"));
 export const ServicePage = lazy(() => import("~/pages/ServicePage"));
