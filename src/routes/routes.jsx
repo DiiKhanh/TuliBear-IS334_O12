@@ -34,7 +34,7 @@ export default function Router() {
         { path: "product/:id", element: <ProductDetail /> },
         { path: "cart", element: <ProtectPage> <CartPage /> </ProtectPage> },
         { path: "checkout", element: <ProtectPage> <CheckoutPage /> </ProtectPage> },
-        { path: "checkout/success", element: <ProtectPage> <SuccessCheckout /> </ProtectPage> },
+        { path: "checkout/success", element: <SuccessCheckout /> },
         { path: "blog", element: <BlogPage /> },
         { path: "contact", element: <ContactPage /> },
         { path: "service", element: <ServicePage /> }
