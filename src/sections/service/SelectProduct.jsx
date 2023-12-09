@@ -7,6 +7,14 @@ import IconButton from "@mui/material/IconButton";
 import InfoIcon from "@mui/icons-material/Info";
 import { useState } from "react";
 import FormControlLabel from "@mui/material/FormControlLabel";
+import pic10 from "~/../public/bangdo/10.png";
+import pic11 from "~/../public/bangdo/11.png";
+import pic12 from "~/../public/bangdo/12.png";
+import pic13 from "~/../public/bangdo/13.png";
+import pic14 from "~/../public/bangdo/14.png";
+import pic17 from "~/../public/TC/17.png";
+import pic18 from "~/../public/TC/18.png";
+import pic23 from "~/../public/TC/23.png";
 
 export default function SelectProduct() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -69,35 +77,84 @@ export default function SelectProduct() {
 const itemData = [
   {
     img: "https://thewowbox.net/home/wp-content/uploads/2020/01/IMG_2107.jpg",
-    title: "Hộp quà 1",
+    title: "Vật phẩm 1",
     rows: 2,
     cols: 2,
     featured: true
   },
   {
     img: "https://thewowbox.net/home/wp-content/uploads/2020/01/IMG_2115.jpg",
-    title: "Hộp quà 2",
+    title: "Vật phẩm 2",
     rows: 2,
     cols: 2,
     featured: true
   },
   {
     img: "https://thewowbox.net/home/wp-content/uploads/2020/06/IMG_6175-8.jpg",
-    title: "Hộp quà 3",
+    title: "Vật phẩm 3",
     rows: 2,
     cols: 2,
     featured: true
   },
   {
     img: "https://thewowbox.net/home/wp-content/uploads/2020/01/IMG_2101.jpg",
-    title: "Hộp quà 4",
+    title: "Vật phẩm 4",
     rows: 2,
     cols: 2,
     featured: true
   },
   {
-    img: "https://cdn.tgdd.vn/Files/2020/02/13/1236158/trang-tri-hop-qua-tang-valentine-tang-la-yeu-ngay-202206040922494323.jpeg",
-    title: "Hộp quà 5",
+    img: pic10,
+    title: "Vật phẩm 5",
+    rows: 2,
+    cols: 2,
+    featured: true
+  },
+  {
+    img: pic11,
+    title: "Vật phẩm 6",
+    rows: 2,
+    cols: 2,
+    featured: true
+  },
+  {
+    img: pic12,
+    title: "Vật phẩm 7",
+    rows: 2,
+    cols: 2,
+    featured: true
+  },
+  {
+    img: pic13,
+    title: "Vật phẩm 8",
+    rows: 2,
+    cols: 2,
+    featured: true
+  },
+  {
+    img: pic14,
+    title: "Vật phẩm 9",
+    rows: 2,
+    cols: 2,
+    featured: true
+  },
+  {
+    img: pic17,
+    title: "Vật phẩm 10",
+    rows: 2,
+    cols: 2,
+    featured: true
+  },
+  {
+    img: pic18,
+    title: "Vật phẩm 11",
+    rows: 2,
+    cols: 2,
+    featured: true
+  },
+  {
+    img: pic23,
+    title: "Vật phẩm 12",
     rows: 2,
     cols: 2,
     featured: true

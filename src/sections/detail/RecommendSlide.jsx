@@ -7,16 +7,16 @@ import { Autoplay } from "swiper/modules";
 const AutoSwiper = ({ children }) => {
   return (
     <Box
-      sx={{
-        "& .swiper-slide": {
-          width: {
-            xs: "50%",
-            sm: "35%",
-            md: "25%",
-            lg: "16.5%"
-          }
-        }
-      }}
+      // sx={{
+      //   "& .swiper-slide": {
+      //     width: {
+      //       xs: "50%",
+      //       sm: "35%",
+      //       md: "25%",
+      //       lg: "16.5%"
+      //     }
+      //   }
+      // }}
     >
       <Swiper
         slidesPerView='4'

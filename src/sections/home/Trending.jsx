@@ -1,6 +1,6 @@
 import { Box, Container, styled, Typography } from "@mui/material";
 import BoxGift from "./BoxGift";
-import products from "~/_mock/product";
+import { productsHot } from "~/_mock/product";
 
 const Trending = () => {
   const PropertiesBox = styled(Box)(({ theme }) => ({
@@ -34,7 +34,7 @@ const Trending = () => {
         </PropertiesTextBox>
 
         <PropertiesBox>
-          {products.map((property) => (
+          {productsHot.map((property) => (
             <BoxGift
               key={property.id}
               img={property.img}

@@ -13,11 +13,6 @@ function SuccessCheckout() {
   const { removeOrder, priceNow, orderList } = useOrderStore();
   const { clearCart } = useCartStore();
 
-  // useEffect(() => {
-  //   removeOrder();
-  //   clearCart();
-  // }, []);
-
   useEffect(() => {
     const sendEmail = async () => {
       const data = {

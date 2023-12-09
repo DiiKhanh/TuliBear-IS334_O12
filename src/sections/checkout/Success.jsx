@@ -11,7 +11,7 @@ function CheckoutSuccessPage() {
   return (
     <Container maxWidth={false} sx={{ marginY: "100px" }}>
       {
-        location.search !== "" && vnp_ResponseCode !== "00" ?
+        location?.search !== "" && vnp_ResponseCode !== "00" ?
           <FailedCheckout /> : <SuccessCheckout />
       }
     </Container>

@@ -181,7 +181,7 @@ const ProductDetailView = () => {
           <Review reviews={reviews} />
         </Box>
         {/* review */}
-
+        <Typography>Sản phẩm có thể bạn thích</Typography>
         <RecommendSlide products={productsPage.slice(0, 5)}/>
 
       </Container>
